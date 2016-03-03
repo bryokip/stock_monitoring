@@ -1,0 +1,442 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MSH Technical Guide &mdash; MSH Commodities Technical Guide 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MSH Commodities Technical Guide 1.0.0 documentation" href="index.html"/>
+        <link rel="prev" title="Welcome to MSH Commodities Technical Guide’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MSH Commodities Technical Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href=""><strong>MSH Technical Guide</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-the-source-files">Getting the source files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#importing-data-from-dhis"><strong>Importing data from DHIS</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#connect-php">connect.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mapping-php">mapping.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">connect.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#county-level-php">county_level.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#county-level-reporting-rates-php">county_level_reporting_rates.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#facility-level-php">facility_level.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#facility-level-reporting-rates-php">facility_level_reporting rates.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fetch-php">fetch.php</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#mvc"><strong>MVC</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#report">report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-stocks">update stocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agency">Agency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user">User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#views">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#includes">Includes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bottom-includes">bottom includes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#footer">footer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#header">header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#top-includes">top includes</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MSH Commodities Technical Guide</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li><strong>MSH Technical Guide</strong></li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/techguide.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="msh-technical-guide">
+<h1><strong>MSH Technical Guide</strong><a class="headerlink" href="#msh-technical-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>On a monthly basis, various committees meets to review the stock status of various health commodities in the country, by analyzing data from various sources including:</p>
+<ol class="arabic simple">
+<li>Facility and County Level Stock Data from DHIS.</li>
+<li>National Level Stock Status data from the Supply Chain Agencies (Central SOH).</li>
+<li>Pipeline information based on pending shipments per funding agency.</li>
+</ol>
+<p>This data is aggregated and analyzed for the different commodities and report generated that indicates to management, the months stock status and pipeline monitoring of the commodities.</p>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of this document is to outline the specific files to be altered database structure to be created, when doing further development on the already developed MSH Commodities Stock Monitoring tool.</p>
+<p>The data source include:</p>
+<ol class="arabic simple">
+<li>Facility and County Level Stock Data from DHIS.</li>
+<li>National Level Stock Status data from the Supply Chain Agencies (Central SOH).</li>
+<li>Pipeline information based on pending shipments per funding agency.</li>
+</ol>
+<div class="section" id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<p>Before development, one should have sufficient knowledge of the following</p>
+<ol class="arabic simple">
+<li>CodeIgniter</li>
+<li>Mysql</li>
+<li>Javascript-Datatables</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The snake case naming convention will be used and instead of having the prefix e.g. lab, fp, or malaria, they will be ignored, and the developer will have to adjust accordingly</p>
+</div>
+</div>
+<div class="section" id="getting-the-source-files">
+<h3>Getting the source files<a class="headerlink" href="#getting-the-source-files" title="Permalink to this headline">¶</a></h3>
+<p>Clone all the files from the following <a class="reference external" href="https://github.com/gitonga123/MSH/">URL</a> and store them in a directory of your choice</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/github.png" src="_images/github.png" />
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="importing-data-from-dhis">
+<h1><strong>Importing data from DHIS</strong><a class="headerlink" href="#importing-data-from-dhis" title="Permalink to this headline">¶</a></h1>
+<p>Inside the root folder, find a folder named <a href="#id1"><span class="problematic" id="id2">**</span></a>initialize_data**select the program the change will be applied to, i.e malaria, family planning or laboratory. inside it, find a folder named <em>initialize</em> and two files named <em>mapping.php</em> and <em>connect.php</em></p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/initialize.png" src="_images/initialize.png" />
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The following two pairs of lines are very important and will be in various files to be stated below</p>
+</div>
+<div class="figure">
+<img alt="_images/mappingurl.png" src="_images/mappingurl.png" />
+</div>
+<p>Gets the data elements selected from DHIS, selected from the Y axis of the specific form, of which the system is being developed for, which is actually a dataset report</p>
+<div class="figure">
+<img alt="_images/mappinginsert.png" src="_images/mappinginsert.png" />
+</div>
+<p>Inserts the data selected into the database and should be modified accordingly</p>
+<div class="section" id="connect-php">
+<h2>connect.php<a class="headerlink" href="#connect-php" title="Permalink to this headline">¶</a></h2>
+<p>This file contains credentials for the connection to both DHIS ones&#8217; database</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/connect.png" src="_images/connect.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="mapping-php">
+<h2>mapping.php<a class="headerlink" href="#mapping-php" title="Permalink to this headline">¶</a></h2>
+<p>This file fetches various records from DHIS and translates it into human readable form. Some of the data fetched by this are:</p>
+<ol class="arabic">
+<li><p class="first">Drug IDS</p>
+</li>
+<li><p class="first">Periods</p>
+</li>
+<li><p class="first">Quantity received</p>
+</li>
+<li><p class="first">Data sets</p>
+</li>
+<li><p class="first">Etc</p>
+<div class="figure">
+<img alt="_images/mapping.png" src="_images/mapping.png" />
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Inside the initialize folder, find the following files</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>connect.php<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Establishes connection to DHIS and to the localhost database</p>
+</div>
+<div class="section" id="county-level-php">
+<h2>county_level.php<a class="headerlink" href="#county-level-php" title="Permalink to this headline">¶</a></h2>
+<p>Pulls data for the various counties from DHIS, using curl. This Data includes the following:</p>
+<ol class="arabic simple">
+<li>County ID</li>
+<li>Drug ID</li>
+<li>Period</li>
+<li>Drug Category ID</li>
+<li>Drug Value</li>
+</ol>
+</div>
+<div class="section" id="county-level-reporting-rates-php">
+<h2>county_level_reporting_rates.php<a class="headerlink" href="#county-level-reporting-rates-php" title="Permalink to this headline">¶</a></h2>
+<p>Fetches the reporting rate value and period and county ID for the 47 counties</p>
+</div>
+<div class="section" id="facility-level-php">
+<h2>facility_level.php<a class="headerlink" href="#facility-level-php" title="Permalink to this headline">¶</a></h2>
+<p>Pulls data for the various counties from DHIS, using curl. This Data includes the following:</p>
+<ol class="arabic simple">
+<li>Drug ID</li>
+<li>Period</li>
+<li>Drug Category ID</li>
+<li>Drug Value</li>
+</ol>
+</div>
+<div class="section" id="facility-level-reporting-rates-php">
+<h2>facility_level_reporting rates.php<a class="headerlink" href="#facility-level-reporting-rates-php" title="Permalink to this headline">¶</a></h2>
+<p>Fetches the reporting rate value and period and county ID for the various facilities</p>
+</div>
+<div class="section" id="fetch-php">
+<h2>fetch.php<a class="headerlink" href="#fetch-php" title="Permalink to this headline">¶</a></h2>
+<p>Fetches County IDs, from the Counties table</p>
+</div>
+</div>
+<div class="section" id="mvc">
+<h1><strong>MVC</strong><a class="headerlink" href="#mvc" title="Permalink to this headline">¶</a></h1>
+<p><strong>Models</strong> get data from the database and pass in on to the <strong>Controllers</strong>, which in turn passes it on to the <strong>Views</strong></p>
+<div class="section" id="report">
+<h2>report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h2>
+<p>This fetches data from the database. It contains various functions that are also defined at the controller</p>
+</div>
+<div class="section" id="update-stocks">
+<h2>update stocks<a class="headerlink" href="#update-stocks" title="Permalink to this headline">¶</a></h2>
+<p>This updates records of the stocks of a product already input into the database</p>
+</div>
+<div class="section" id="agency">
+<h2>Agency<a class="headerlink" href="#agency" title="Permalink to this headline">¶</a></h2>
+<p>This enables one to add, edit, update or delete records partaining to Agencies</p>
+</div>
+<div class="section" id="user">
+<h2>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h2>
+<p>This contains a way to add, edit, update or delete records partaining to users</p>
+<p>The following other files have the same functionality as the others listed above</p>
+<ol class="arabic simple">
+<li>commodities</li>
+<li>forecast</li>
+<li>mos color codes</li>
+<li>pending shipments</li>
+<li>zone</li>
+<li>pending shipments</li>
+<li>planned shipments</li>
+</ol>
+</div>
+<div class="section" id="views">
+<h2>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h2>
+<p>The view folder contains files used to render the files developed into the various systems.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The below line of code is required in order to direct the view to the specific controller required and should be modified in all files that it is required</p>
+</div>
+<div class="figure">
+<img alt="_images/baseurl.png" src="_images/baseurl.png" />
+</div>
+</div>
+<div class="section" id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
+<p>This folder contains the following files:</p>
+<div class="section" id="bottom-includes">
+<h3>bottom includes<a class="headerlink" href="#bottom-includes" title="Permalink to this headline">¶</a></h3>
+<p>Contains J Query code used in developing charts and graphs</p>
+</div>
+<div class="section" id="footer">
+<h3>footer<a class="headerlink" href="#footer" title="Permalink to this headline">¶</a></h3>
+<p>This file contains the following:</p>
+<ol class="arabic simple">
+<li>Time taken to render the page</li>
+<li>Copyright message</li>
+<li>Year</li>
+</ol>
+</div>
+<div class="section" id="header">
+<h3>header<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h3>
+<p>This files contain the header for lab, malaria and family planning. It contains the following:</p>
+<ol class="arabic simple">
+<li>Username of user logged in</li>
+<li>Side navigation bar</li>
+<li>Name of the system logged into</li>
+</ol>
+</div>
+<div class="section" id="top-includes">
+<h3>top includes<a class="headerlink" href="#top-includes" title="Permalink to this headline">¶</a></h3>
+<p>Contains JQuery code and functions to query county data</p>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to MSH Commodities Technical Guide’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Group 3.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

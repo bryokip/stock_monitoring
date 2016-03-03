@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User Guide &mdash; MSH Commodities Stock Monitoring Tool 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MSH Commodities Stock Monitoring Tool 1.0.0 documentation" href="index.html"/>
+        <link rel="prev" title="Welcome to MSH Commodities Stock Monitoring Tool’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MSH Commodities Stock Monitoring Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href=""><strong>User Guide</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#session-authentication">Session Authentication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#logging-in">Logging in</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logging-out">Logging out</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#permissions"><strong>Permissions</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#login-roles">Login roles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#user-management"><strong>User management</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#application-layout"><strong>Application Layout</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-regular-user-view">The Regular User View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-editor-view">The editor view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-admin-view">The Admin View</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#header">Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#side-bar">Side bar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id1"><strong>Stocks</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#planned-procurements">Planned procurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pending-shipments">Pending shipments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#received-stock">Received Stock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update-stock">Update Stock</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id2"><strong>Reports</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#central-level-mos-report-dhis2">Central level MOS Report(DHIS2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#facility-level-mos">Facility Level MOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#national-level-mos">National Level MOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#county-level-mos-report-dhis2">County level MOS Report(DHIS2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forecast-data-mos">Forecast Data MOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forecast-variance-tracker">Forecast Variance Tracker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Stocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pending-shipments-report">Pending Shipments Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#total-pending-commodities-per-source-agency">Total Pending Commodities per source(Agency)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#individual-shipments">Individual shipments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id4"><strong>Settings</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#supply-chain-agencies">Supply chain agencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commodities">Commodities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zones">Zones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#counties">Counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forecasts">Forecasts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manage-mos-color-codes">Manage MOS color codes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manage-users">Manage Users</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MSH Commodities Stock Monitoring Tool</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li><strong>User Guide</strong></li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/userguide.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="user-guide">
+<h1><strong>User Guide</strong><a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>On a monthly basis, various committees meets to review the stock status of various health commodities in the country, by analyzing data from various sources including:</p>
+<ol class="arabic simple">
+<li>Facility and County Level Stock Data from DHIS.</li>
+<li>National Level Stock Status data from the Supply Chain Agencies (Central SOH).</li>
+<li>Pipeline information based on pending shipments per funding agency.</li>
+</ol>
+<p>This data is aggregated and analyzed for the different commodities and report generated that indicates to management, the months stock status and pipeline monitoring of the commodities.</p>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>Purpose of this project is to create a stock status management tool that analyzes data from various sources for purposes of analysis and report generation.</p>
+<p>The sources include:</p>
+<ol class="arabic simple">
+<li>Facility and County Level Stock Data from DHIS.</li>
+<li>National Level Stock Status data from the Supply Chain Agencies (Central SOH).</li>
+<li>Pipeline information based on pending shipments per funding agency.</li>
+</ol>
+</div>
+<div class="section" id="session-authentication">
+<h2>Session Authentication<a class="headerlink" href="#session-authentication" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="logging-in">
+<h3>Logging in<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h3>
+<p>For a user to access the functionality of the system, they have to select the system</p>
+<img alt="_images/landingpage.png" src="_images/landingpage.png" />
+<p>A user then has to enter their username and password and then log in to the desired system.
+A user cannot log into a system that they are not authorized to access.</p>
+<img alt="_images/login.png" src="_images/login.png" />
+<p>Below, is an image of the system when the malaria administrator has logged into the malaria system</p>
+<img alt="_images/maladmin.png" src="_images/maladmin.png" />
+<p>Below, is an image of the system when the Family planning administrator has logged into the Family planning system</p>
+<img alt="_images/fpadmin.png" src="_images/fpadmin.png" />
+<p>Below, is an image of the system when the Laboratory administrator has logged into the Laboratory system</p>
+<img alt="_images/labadmin.png" src="_images/labadmin.png" />
+<p>Below, is an image of the system when a malaria user has logged into the malaria system</p>
+<img alt="_images/malnorm.png" src="_images/malnorm.png" />
+<p>Below, is an image of the system when a Family Planning user has logged into the Family Planningsystem</p>
+<img alt="_images/fpnorm.png" src="_images/fpnorm.png" />
+<p>Below, is an image of the system when a Laboratory user has logged into the Laboratory system</p>
+<img alt="_images/labnorm.png" src="_images/labnorm.png" />
+</div>
+<div class="section" id="logging-out">
+<h3>Logging out<a class="headerlink" href="#logging-out" title="Permalink to this headline">¶</a></h3>
+<p>A given user can logout after using the tool by clicking the logout button located in the header. After logging out, the user is redirected to the login page.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since the systems are essentially the same with different data, the following steps will be documented using the family planning system, but the steps are the same for both the malaria and laboratory commodities tool.</p>
+</div>
+</div>
+</div>
+<div class="section" id="permissions">
+<h2><strong>Permissions</strong><a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="login-roles">
+<h3>Login roles<a class="headerlink" href="#login-roles" title="Permalink to this headline">¶</a></h3>
+<p>There are various user roles according to the user who is logged in:</p>
+<ol class="arabic">
+<li><p class="first">Regular users who can only view reports generated by the system.</p>
+</li>
+<li><p class="first">Editors who can make changes to the system data that is used to generate reports. They can also view the system reports.</p>
+</li>
+<li><p class="first">The Admin who has all access of the functionality of the system. These include:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Creation and management of users</li>
+<li>Updating data that is used to generate reports</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="user-management">
+<h2><strong>User management</strong><a class="headerlink" href="#user-management" title="Permalink to this headline">¶</a></h2>
+<p>The admin to a has all privillages and permissions to manage users registered in the system. An administrator to one system cannot manage users, or access data from another system. These priviledges are to add new users and edit the existing ones.</p>
+</div>
+<div class="section" id="application-layout">
+<h2><strong>Application Layout</strong><a class="headerlink" href="#application-layout" title="Permalink to this headline">¶</a></h2>
+<p>This is the layout of the application:</p>
+<div class="section" id="the-regular-user-view">
+<h3>The Regular User View<a class="headerlink" href="#the-regular-user-view" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-editor-view">
+<h3>The editor view<a class="headerlink" href="#the-editor-view" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-admin-view">
+<h3>The Admin View<a class="headerlink" href="#the-admin-view" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="header">
+<h4>Header<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h4>
+<p>The header of the application has no menu. It has a title: Malaria Commodities Stock Monitoring Tool, or title: Family Planning Commodities Stock Monitoring Tool or title: Laboratory Commodities Stock Monitoring Tool.</p>
+<p>It also has the log out icon that enables a user to log out of the system.</p>
+</div>
+<div class="section" id="side-bar">
+<h4>Side bar<a class="headerlink" href="#side-bar" title="Permalink to this headline">¶</a></h4>
+<p>The side bar of the aplication has an array of links as seen in the menu. The admin of the system can be able to view the following:</p>
+<div class="section" id="home">
+<h5>Home<a class="headerlink" href="#home" title="Permalink to this headline">¶</a></h5>
+<p>This link redirects to the Homepage of the system logged into. The dashboard is the home page of the system.</p>
+</div>
+<div class="section" id="stocks">
+<h5>Stocks<a class="headerlink" href="#stocks" title="Permalink to this headline">¶</a></h5>
+<p>This link allows the admin to view a report on the malaria stock. It includes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Planned procurements</li>
+<li>Pending shipments</li>
+<li>Received stock</li>
+<li>Update stock</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="reports">
+<h5>Reports<a class="headerlink" href="#reports" title="Permalink to this headline">¶</a></h5>
+<p>This link is used to query various reports from the system. The reports include:</p>
+<blockquote>
+<div><blockquote>
+<div><ol class="arabic simple">
+<li>Central Level MOS</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple">
+<li>Forecast Data MOS</li>
+<li>Facility Level MOS</li>
+<li>National Level MOS</li>
+<li>County Level MOS</li>
+<li>Forecast Variance Tracker</li>
+<li>Stocks</li>
+<li>Pending Shipments Report</li>
+<li>Total Pending Commodities per agencies</li>
+<li>Individual Shipments</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="settings">
+<h5>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h5>
+<p>This link enables the admin to manage the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Funding agencies</li>
+<li>Supply chain agencies</li>
+<li>Commodities</li>
+<li>Zones</li>
+<li>Counties</li>
+<li>Forecasts</li>
+<li>Manage MOS color codes</li>
+<li>Manage Users</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2><strong>Stocks</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="planned-procurements">
+<h3>Planned procurements<a class="headerlink" href="#planned-procurements" title="Permalink to this headline">¶</a></h3>
+<p>As the admin, one selects the planned procurement date from the drop down and then the report is generated.</p>
+<img alt="_images/planned-procurement.png" src="_images/planned-procurement.png" />
+<p>One can also add a new planned procurement by clicking the button “add a new planned procurement”:</p>
+<img alt="_images/Add-new-planned-procurement.png" src="_images/Add-new-planned-procurement.png" />
+</div>
+<div class="section" id="pending-shipments">
+<h3>Pending shipments<a class="headerlink" href="#pending-shipments" title="Permalink to this headline">¶</a></h3>
+<p>This loads the panel for managing the pending shipments. As the admin, one click an item from the pending stock list given for editing or deleting.</p>
+<img alt="_images/pendingShipment.png" src="_images/pendingShipment.png" />
+<p>After choosing one of the pending stock, one can edit or delete it.</p>
+<img alt="_images/editPendingStock.png" src="_images/editPendingStock.png" />
+<p>As the admin, one can also add a new transaction by clicking the button of adding a new transaction.</p>
+<img alt="_images/addPendingStock.png" src="_images/addPendingStock.png" />
+</div>
+<div class="section" id="received-stock">
+<h3>Received Stock<a class="headerlink" href="#received-stock" title="Permalink to this headline">¶</a></h3>
+<p>This loads the panel for managing the received stock. one clicks an item from the received stock list given for editing or deleting.</p>
+<img alt="_images/receivedStock.png" src="_images/receivedStock.png" />
+<p>After choosing one of the current stock commodities, the admin can edit or delete it.</p>
+<img alt="_images/editDeleteCurrentStock.png" src="_images/editDeleteCurrentStock.png" />
+<p>A user can also add a new record by clicking the button of adding a new record.</p>
+<img alt="_images/addRecievedStock.png" src="_images/addRecievedStock.png" />
+</div>
+<div class="section" id="update-stock">
+<h3>Update Stock<a class="headerlink" href="#update-stock" title="Permalink to this headline">¶</a></h3>
+<p>A panel for updating the current stocks. THis panel enables one to view a list of the current stock.</p>
+<img alt="_images/current-stock.png" src="_images/current-stock.png" />
+<ol class="arabic simple">
+<li>one can select an item for editing or deleting from the system:</li>
+</ol>
+<img alt="_images/update-current-stock.png" src="_images/update-current-stock.png" />
+<ol class="arabic simple">
+<li>one can also add new stock to the particular system:</li>
+</ol>
+<img alt="_images/add_current-stock.png" src="_images/add_current-stock.png" />
+</div>
+</div>
+<div class="section" id="id2">
+<h2><strong>Reports</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Reports of the particular system are generated here.</p>
+<div class="section" id="central-level-mos-report-dhis2">
+<h3>Central level MOS Report(DHIS2)<a class="headerlink" href="#central-level-mos-report-dhis2" title="Permalink to this headline">¶</a></h3>
+<p>It shows a report on the central level MOS from DHIS2. It reports on the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Commodity name</li>
+<li>Adjusted Facility AMC</li>
+<li>Central Stock on Hand KEMSA</li>
+<li>Pending Shipments</li>
+<li>Central Level MOS</li>
+<li>Pending Shipments MOS</li>
+</ol>
+<div class="figure">
+<img alt="_images/centralLevelMOSReport.png" src="_images/centralLevelMOSReport.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="facility-level-mos">
+<h3>Facility Level MOS<a class="headerlink" href="#facility-level-mos" title="Permalink to this headline">¶</a></h3>
+<p>A report on facility level MOS. It reports on the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Commodity name</li>
+<li>Adjusted Facility AMC</li>
+<li>Stock on Hand</li>
+<li>Facility Level Month of Stock(MOS)</li>
+</ol>
+<div class="figure">
+<img alt="_images/facilityLevelMOSReport.png" src="_images/facilityLevelMOSReport.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="national-level-mos">
+<h3>National Level MOS<a class="headerlink" href="#national-level-mos" title="Permalink to this headline">¶</a></h3>
+<p>A report on national level MOS. It reports on the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Commodity name</li>
+<li>Adjusted Facility AMC</li>
+<li>Stock on Hand</li>
+<li>Central Stock on Hand KEMSA</li>
+<li>Pending Shipments</li>
+<li>Facility Stock on Hand</li>
+<li>Central Level MOS</li>
+<li>Pending Shipments MOS</li>
+<li>Facility Level MOS</li>
+<li>National Level MOS</li>
+</ol>
+<div class="figure">
+<img alt="_images/nationalLevelMOSforeCast.png" src="_images/nationalLevelMOSforeCast.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="county-level-mos-report-dhis2">
+<h3>County level MOS Report(DHIS2)<a class="headerlink" href="#county-level-mos-report-dhis2" title="Permalink to this headline">¶</a></h3>
+<p>It generates a report on the county level MOS. It reports on:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Commodity name</li>
+<li>Aggregated Adjusted Consumption Totals</li>
+<li>Aggregated Stock on Hand Totals</li>
+<li>County level MOS</li>
+</ol>
+<div class="figure">
+<img alt="_images/countyLevelMOSReport.png" src="_images/countyLevelMOSReport.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="forecast-data-mos">
+<h3>Forecast Data MOS<a class="headerlink" href="#forecast-data-mos" title="Permalink to this headline">¶</a></h3>
+<p>A report on central level MOS using forecast data. It reports on the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Commodity name</li>
+<li>Forecast Monthly Consumption</li>
+<li>Stock on Hand</li>
+<li>Forecast Month of Stock(mos)</li>
+</ol>
+<div class="figure">
+<img alt="_images/forecastMOSforeCast.png" src="_images/forecastMOSforeCast.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="forecast-variance-tracker">
+<h3>Forecast Variance Tracker<a class="headerlink" href="#forecast-variance-tracker" title="Permalink to this headline">¶</a></h3>
+<p>A report that tracks the forecast variance at a particular time.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/varianceTracker.png" src="_images/varianceTracker.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h3>Stocks<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>This shows a report on the individual available stock at a particular period.
+It reports on the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Commodity name</li>
+<li>Unit</li>
+<li>Central SOH</li>
+<li>Total</li>
+<li>Funding agency totals</li>
+</ol>
+<div class="figure">
+<img alt="_images/stocks-reprt.png" src="_images/stocks-reprt.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="pending-shipments-report">
+<h3>Pending Shipments Report<a class="headerlink" href="#pending-shipments-report" title="Permalink to this headline">¶</a></h3>
+<p>It shows a report on the current pending shipment of commodities. It reports on the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Commodity name</li>
+<li>Expected Stocks</li>
+<li>Expected Shipments Totals</li>
+</ol>
+<div class="figure">
+<img alt="_images/current_pendingCommodities.png" src="_images/current_pendingCommodities.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="total-pending-commodities-per-source-agency">
+<h3>Total Pending Commodities per source(Agency)<a class="headerlink" href="#total-pending-commodities-per-source-agency" title="Permalink to this headline">¶</a></h3>
+<p>This shows total pending commoditities per agency over a given period of time. It reports on:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Commodity name</li>
+<li>Source(Source) Totals</li>
+</ol>
+<div class="figure">
+<img alt="_images/totalPendingStock.png" src="_images/totalPendingStock.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="individual-shipments">
+<h3>Individual shipments<a class="headerlink" href="#individual-shipments" title="Permalink to this headline">¶</a></h3>
+<p>This shows a report on the individual shipment of stock as per a given period. It shows the following details:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Commodity</li>
+<li>Supporting agency</li>
+<li>Quantity</li>
+<li>E.T.A Details</li>
+<li>Color code</li>
+</ol>
+<div class="figure">
+<img alt="_images/individualPendingStockReport.png" src="_images/individualPendingStockReport.png" />
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id4">
+<h2><strong>Settings</strong><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="funding-agencies">
+<h3>Funding Agencies<a class="headerlink" href="#funding-agencies" title="Permalink to this headline">¶</a></h3>
+<p>This loads the panel for managing the funding agencies. The admin clicks a funding agency from the list given for editing or deleting.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/fundingAgency.png" src="_images/fundingAgency.png" />
+</div>
+</div></blockquote>
+<p>After choosing one of the agencies, the admin can edit or delete it.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/manageAgency.png" src="_images/manageAgency.png" />
+</div>
+</div></blockquote>
+<p>The admin can also add a funding by clicking the button of adding an agency.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/addAgency.png" src="_images/addAgency.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="supply-chain-agencies">
+<h3>Supply chain agencies<a class="headerlink" href="#supply-chain-agencies" title="Permalink to this headline">¶</a></h3>
+<p>This loads the panel for managing the supply chain agencies. The admin clicks a supply chain agency from the list given for editing or deleting.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/supplyChainAgency.png" src="_images/supplyChainAgency.png" />
+</div>
+</div></blockquote>
+<p>After choosing one of the supply chain agencies, the admin can edit or delete it.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/editSupplyAgency.png" src="_images/editSupplyAgency.png" />
+</div>
+</div></blockquote>
+<p>The admin can also add a supply chain agency by clicking the button of adding a supply chain agency.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/addSupplyChainAgency.png" src="_images/addSupplyChainAgency.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="commodities">
+<h3>Commodities<a class="headerlink" href="#commodities" title="Permalink to this headline">¶</a></h3>
+<p>This loads the panel for managing the individual commodities. The admin clicks a commodity from the list given for editing or deleting.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/commodity.png" src="_images/commodity.png" />
+</div>
+</div></blockquote>
+<p>The admin can also add a commodity by clicking the button of adding a commodity.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/addCommodity.png" src="_images/addCommodity.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="zones">
+<h3>Zones<a class="headerlink" href="#zones" title="Permalink to this headline">¶</a></h3>
+<p>The zones are managed here. The admin is able to view the already existing zones. There is an option for editing or editing the zones:</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/commodity.png" src="_images/commodity.png" />
+</div>
+</div></blockquote>
+<p>Editing a zone:</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/editZone.png" src="_images/editZone.png" />
+</div>
+</div></blockquote>
+<p>The admin can also add a new zone into the system. Here is the screen shot:</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/addZone.png" src="_images/addZone.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="counties">
+<h3>Counties<a class="headerlink" href="#counties" title="Permalink to this headline">¶</a></h3>
+<p>This loads the panel for viewing and updating counties. The admin clicks a specific county from the list given for updating the details about it.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/counties.png" src="_images/counties.png" />
+</div>
+</div></blockquote>
+<p>After choosing one of the counties, the admin can edit the zone and/or the comment about it.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/updateCounty.png" src="_images/updateCounty.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="forecasts">
+<h3>Forecasts<a class="headerlink" href="#forecasts" title="Permalink to this headline">¶</a></h3>
+<p>This loads the panel for managing forecast commodity data as per the selected period. The admin clicks an item from the list given for editing or deleting.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/forecasts.png" src="_images/forecasts.png" />
+</div>
+</div></blockquote>
+<p>After choosing one of the commodities, the admin can edit or delete it.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/editForecasts.png" src="_images/editForecasts.png" />
+</div>
+</div></blockquote>
+<p>A user can also add a static parameter by clicking the button of adding a static parameter.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/addForecasts.png" src="_images/addForecasts.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="manage-mos-color-codes">
+<h3>Manage MOS color codes<a class="headerlink" href="#manage-mos-color-codes" title="Permalink to this headline">¶</a></h3>
+<p>This is the panel for management of the MOS color codes. The admin can view the list of the color codes that have been used in the system.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/color-codes.png" src="_images/color-codes.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="manage-users">
+<h3>Manage Users<a class="headerlink" href="#manage-users" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Here, the admin can view the list of the users registered in the system. The admin has the permissions of adding new users and updating their details.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/manager-users.png" src="_images/manager-users.png" />
+</div>
+</div></blockquote>
+</div></blockquote>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to MSH Commodities Stock Monitoring Tool’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Group 3.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
